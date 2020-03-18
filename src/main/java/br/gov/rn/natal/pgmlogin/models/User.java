@@ -16,11 +16,11 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
+@Entity
 public class User implements Serializable {
 	@JsonIgnore
 	private static final long serialVersionUID = 1L;
@@ -32,7 +32,7 @@ public class User implements Serializable {
 	@Column(name = "name", nullable = false)
 	private String name;
 
-	@Column(name = "email", nullable = false)
+	@Column(name = "email")
 	private String email;
 
 	@Column(name = "password", nullable = false)

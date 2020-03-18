@@ -1,6 +1,5 @@
 package br.gov.rn.natal.pgmlogin.services;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +17,7 @@ public class UserService {
 
 	@Transactional
 	public User createUser(User user) {
-		User newUser = new User();
-		newUser.setDateCreate(new Date());
-		return userRepository.save(newUser);
+		return userRepository.save(user);
 	}
 
 	public List<User> getAllUsers() {
